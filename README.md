@@ -1,3 +1,5 @@
+<img src="./assets/Ceph_logo.png" alt="Ceph logo" style="width: 450px;" align="right">
+
 # Ceph-quickstarts
 Ceph  an open-source software-defined storage platform Quickstarts.
 
