@@ -16,6 +16,38 @@ Ceph  an open-source software-defined storage platform Quickstarts.
 - Exabyte and beyond
 - Run on general commodity hardware
 - Is a true SDS solution
+- Supports: blocks, files, and object storage from a single syst. (that's what makes it *Unified Storage* (new def.))
+- Focus on: object storage blocks capabilities (making it *future ready* compared to blocks or files focus)
+- It manages not files but objects and supports block-and-file-based storage on top of it
+- Objects are better for scalling and increased performance by eliminating metadata operations
+- Algos are used to dyn compt where the obj should be stored and retrieved from
+- No central lookups to keep track of metadata (caused by reads and writes)
+- It uses: CRUSH algo
+    - Means: Controlled Replication Under Scalable Hashing
+    - It computes on demand where the data should be written to or read from
+    - This means no more need to have a centralized table for metadata
+    - Distributed accross cluster nodes (computing)
+    - Infrastructure awarness:
+        - Understands the relationships of various components in the infra
+        - unique failure zones, disk, node, rack, row, and data center room
+        - It will store data and replicate it to avoid data lost knowing these details
+- Self-managing
+- Self-healing
+- 
+
+> CRUSH mapping needs to be in the correct order.
+
+**RAID:**
+> Issue with RAID: 
+>
+> - Rebuilds are painful
+> - If other drives in the RAID group fails it becomes a chaotic situation
+> - 
+
+## Unified next-generation storage architecture
+- Used to mean: providing file and block storage from a single system
+- Now: object storage (because of: cloud computing, big data, IoT)
+- Conclusion: all storage that are not supporting of object storage are than not *Unified Storage* solutions
 
 ## Architectual philosophy
 - All component must scale linearly
@@ -47,6 +79,8 @@ Ceph  an open-source software-defined storage platform Quickstarts.
 - Mirantis
 - SUSE
 - etc
+
+## 
 
 ## Resources
 ### Books
